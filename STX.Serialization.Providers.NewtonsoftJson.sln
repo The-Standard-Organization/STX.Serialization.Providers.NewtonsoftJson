@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STX.Serialization.Providers.NewtonsoftJson", "STX.Serialization.Providers.NewtonsoftJson\STX.Serialization.Providers.NewtonsoftJson.csproj", "{AE103EBE-A027-4C9B-9D6F-6334C079BD15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STX.Serialization.Providers.NewtonsoftJson.Infrastructure.Build", "STX.Serialization.Providers.NewtonsoftJson.Infrastructure.Build\STX.Serialization.Providers.NewtonsoftJson.Infrastructure.Build.csproj", "{D52B09AF-48D2-46A2-B4D2-EE83B91BD36E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STX.Serialization.Providers.NewtonsoftJson.Tests.Unit", "STX.Serialization.Providers.NewtonsoftJson.Tests.Unit\STX.Serialization.Providers.NewtonsoftJson.Tests.Unit.csproj", "{6E48EBC6-A985-4D60-9425-3A6503AFB26C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STX.Serialization.Providers.NewtonsoftJson.Tests.Acceptance", "STX.Serialization.Providers.NewtonsoftJson.Tests.Acceptance\STX.Serialization.Providers.NewtonsoftJson.Tests.Acceptance.csproj", "{115167EF-58B4-4B80-918A-A30A00EC813F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE103EBE-A027-4C9B-9D6F-6334C079BD15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE103EBE-A027-4C9B-9D6F-6334C079BD15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE103EBE-A027-4C9B-9D6F-6334C079BD15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE103EBE-A027-4C9B-9D6F-6334C079BD15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D52B09AF-48D2-46A2-B4D2-EE83B91BD36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52B09AF-48D2-46A2-B4D2-EE83B91BD36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52B09AF-48D2-46A2-B4D2-EE83B91BD36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52B09AF-48D2-46A2-B4D2-EE83B91BD36E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E48EBC6-A985-4D60-9425-3A6503AFB26C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E48EBC6-A985-4D60-9425-3A6503AFB26C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E48EBC6-A985-4D60-9425-3A6503AFB26C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E48EBC6-A985-4D60-9425-3A6503AFB26C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{115167EF-58B4-4B80-918A-A30A00EC813F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115167EF-58B4-4B80-918A-A30A00EC813F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115167EF-58B4-4B80-918A-A30A00EC813F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{115167EF-58B4-4B80-918A-A30A00EC813F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BC94BC3-6CB1-4009-A243-A110AFBA32ED}
+	EndGlobalSection
+EndGlobal
