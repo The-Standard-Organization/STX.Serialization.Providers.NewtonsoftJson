@@ -87,6 +87,23 @@ namespace STX.Serialization.Providers.NewtonsoftJson.Infrastructure.Build.Servic
                                 }
                             }
                         }
+                    },
+                    {
+                        "add_tag",
+                        new TagJob(
+                            runsOn: BuildMachines.UbuntuLatest,
+                            dependsOn: "build",
+                            projectRelativePath: "STX.Serialization.Providers.NewtonsoftJson/" +
+                                "STX.Serialization.Providers.NewtonsoftJson.csproj",
+                            githubToken: "${{ secrets.PAT_FOR_TAGGING }}",
+                            branchName: branchName)
+                    },
+                    {
+                        "publish",
+                        new PublishJob(
+                            runsOn: BuildMachines.UbuntuLatest,
+                            dependsOn: "add_tag",
+                            nugetApiKey: "${{ secrets.NUGET_ACCESS }}")
                     }
                 }
             };
