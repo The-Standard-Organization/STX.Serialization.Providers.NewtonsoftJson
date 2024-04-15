@@ -3,33 +3,18 @@
 // ----------------------------------------------------------------------------------
 
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace STX.Serialization.Providers.NewtonsoftJson.Brokers.Serializations
 {
     internal class NewtonsoftSerializationBroker : INewtonsoftSerializationBroker
     {
-        private readonly JsonSerializerSettings jsonSerializerSettings;
+        private readonly JsonSerializer jsonSerializer;
 
         public NewtonsoftSerializationBroker(JsonSerializerSettings jsonSerializerSettings) =>
-            this.jsonSerializerSettings = jsonSerializerSettings;
+            jsonSerializer = JsonSerializer.Create(jsonSerializerSettings);
 
-        public async ValueTask SerializeAsync<T>(
-            Stream utf8JsonStream,
-            T @object,
-            CancellationToken cancellationToken = default)
-        {
-            await Task.Run(() =>
-            {
-                using (var writer = new StreamWriter(utf8JsonStream))
-                using (var jsonWriter = new JsonTextWriter(writer))
-                {
-                    var serializer = JsonSerializer.Create(jsonSerializerSettings);
-                    serializer.Serialize(writer, @object);
-                }
-            }, cancellationToken);
-        }
+        public void SerializeAsync<T>(StreamWriter writer, T @object) =>
+            jsonSerializer.Serialize(writer, @object);
     }
 }

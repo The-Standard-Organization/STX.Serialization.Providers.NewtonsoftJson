@@ -3,16 +3,11 @@
 // ----------------------------------------------------------------------------------
 
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace STX.Serialization.Providers.NewtonsoftJson.Brokers.Serializations
 {
     internal interface INewtonsoftSerializationBroker
     {
-        ValueTask SerializeAsync<T>(
-            Stream utf8JsonStream,
-            T @object,
-            CancellationToken cancellationToken = default);
+        void SerializeAsync<T>(StreamWriter writer, T @object);
     }
 }
