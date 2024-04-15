@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>disable</ImplicitUsings>
-		<Nullable>disable</Nullable>
+		<Nullable>enable</Nullable>
 		<Title>STX.Serialization.Providers.NewtonsoftJson</Title>
 		<Product>STX.Serialization.Providers.NewtonsoftJson</Product>
 		<PackageId>STX.Serialization.Providers.NewtonsoftJson</PackageId>

@@ -13,7 +13,10 @@ namespace STX.Serialization.Providers.NewtonsoftJson.Brokers.Serializations
         public NewtonsoftSerializationBroker(JsonSerializerSettings jsonSerializerSettings) =>
             jsonSerializer = JsonSerializer.Create(jsonSerializerSettings);
 
-        public void SerializeAsync<T>(JsonTextWriter jsonWriter, T @object) =>
+        public void Serialize<T>(JsonTextWriter jsonWriter, T @object) =>
             jsonSerializer.Serialize(jsonWriter, @object);
+
+        public T? Deserialize<T>(JsonTextReader jsonReader) =>
+            jsonSerializer.Deserialize<T>(jsonReader);
     }
 }
