@@ -16,7 +16,7 @@ namespace STX.Serialization.Providers.NewtonsoftJson.Brokers.Serializations
         public void Serialize<T>(JsonTextWriter jsonWriter, T @object) =>
             jsonSerializer.Serialize(jsonWriter, @object);
 
-        public T? Deserialize<T>(JsonTextReader jsonReader) =>
+        public T Deserialize<T>(JsonTextReader jsonReader) =>
             jsonSerializer.Deserialize<T>(jsonReader);
     }
 }

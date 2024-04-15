@@ -9,6 +9,6 @@ namespace STX.Serialization.Providers.NewtonsoftJson.Brokers.Serializations
     internal interface INewtonsoftSerializationBroker
     {
         void Serialize<T>(JsonTextWriter jsonWriter, T @object);
-        T? Deserialize<T>(JsonTextReader jsonReader);
+        T Deserialize<T>(JsonTextReader jsonReader);
     }
 }
